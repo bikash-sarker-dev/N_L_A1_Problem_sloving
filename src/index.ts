@@ -105,6 +105,29 @@ const products = [
 // getMostExpensiveProduct(products);
 console.log(getMostExpensiveProduct(products));
 //-----------------------------------------------------------------------------------------
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  switch (day) {
+    case Day.Saturday:
+      return "Weekend";
+    case Day.Sunday:
+      return "Weekend";
+    default:
+      return "Weekday";
+  }
+}
+console.log(getDayType(Day.Monday));
+console.log(getDayType(Day.Sunday));
 //-----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
