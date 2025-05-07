@@ -27,9 +27,44 @@ function filterByRating(
   );
 }
 
-console.log(filterByRating(books));
+// console.log(filterByRating(books));
 //-----------------------------------------------------------------------------------------
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  let arr: T[] = [];
+  return arr.concat(...arrays);
+}
+console.log(concatenateArrays(["a", "b"], ["c"]));
+console.log(concatenateArrays([1, 2], [3, 4], [5]));
 //-----------------------------------------------------------------------------------------
+
+class Vehicle {
+  make: string;
+  year: number;
+  constructor(make: string, year: number) {
+    this.make = make;
+    this.year = year;
+  }
+  getInfo() {
+    console.log(`Make: ${this.make}, Year: ${this.year}`);
+  }
+}
+
+class Car extends Vehicle {
+  private _model: string;
+  constructor(make: string, year: number, model: string) {
+    super(make, year);
+    this._model = model;
+  }
+
+  getModel() {
+    console.log(`Model: ${this._model}`);
+  }
+}
+
+const myCar = new Car("Toyota", 2020, "Corolla");
+myCar.getInfo();
+myCar.getModel();
 //-----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
