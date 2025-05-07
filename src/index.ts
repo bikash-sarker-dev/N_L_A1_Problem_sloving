@@ -66,7 +66,44 @@ const myCar = new Car("Toyota", 2020, "Corolla");
 myCar.getInfo();
 myCar.getModel();
 //-----------------------------------------------------------------------------------------
+
+function processValue(value: string | number): number {
+  if (typeof value === "string") {
+    return value.length;
+  } else if (typeof value === "number") {
+    return value * 2;
+  }
+}
+console.log(processValue("hello"));
+console.log(processValue(10));
 //-----------------------------------------------------------------------------------------
+
+interface Product {
+  name: string;
+  price: number;
+}
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  let arr = products[0];
+  if (products.length === 0) {
+    return null;
+  } else {
+    products.forEach((item) => {
+      if (item.price > arr.price) {
+        arr = item;
+      }
+    });
+
+    return arr;
+  }
+}
+
+const products = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 },
+];
+// getMostExpensiveProduct(products);
+console.log(getMostExpensiveProduct(products));
 //-----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
