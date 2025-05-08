@@ -8,9 +8,9 @@ function formatString(input: string, toUpper?: boolean): string {
   }
 }
 
-console.log(formatString("Hello"));
-console.log(formatString("Hello", true));
-console.log(formatString("Hello", false));
+// console.log(formatString("Hello"));
+// console.log(formatString("Hello", true));
+// console.log(formatString("Hello", false));
 
 //-----------------------------------------------------------------------------------------
 
@@ -34,8 +34,8 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   let arr: T[] = [];
   return arr.concat(...arrays);
 }
-console.log(concatenateArrays(["a", "b"], ["c"]));
-console.log(concatenateArrays([1, 2], [3, 4], [5]));
+// console.log(concatenateArrays(["a", "b"], ["c"]));
+// console.log(concatenateArrays([1, 2], [3, 4], [5]));
 //-----------------------------------------------------------------------------------------
 
 class Vehicle {
@@ -63,8 +63,8 @@ class Car extends Vehicle {
 }
 
 const myCar = new Car("Toyota", 2020, "Corolla");
-myCar.getInfo();
-myCar.getModel();
+// myCar.getInfo();
+// myCar.getModel();
 //-----------------------------------------------------------------------------------------
 
 function processValue(value: string | number): number {
@@ -74,8 +74,8 @@ function processValue(value: string | number): number {
     return value * 2;
   }
 }
-console.log(processValue("hello"));
-console.log(processValue(10));
+// console.log(processValue("hello"));
+// console.log(processValue(10));
 //-----------------------------------------------------------------------------------------
 
 interface Product {
@@ -103,7 +103,7 @@ const products = [
   { name: "Bag", price: 50 },
 ];
 // getMostExpensiveProduct(products);
-console.log(getMostExpensiveProduct(products));
+// console.log(getMostExpensiveProduct(products));
 //-----------------------------------------------------------------------------------------
 
 enum Day {
@@ -126,8 +126,8 @@ function getDayType(day: Day): string {
       return "Weekday";
   }
 }
-console.log(getDayType(Day.Monday));
-console.log(getDayType(Day.Sunday));
+// console.log(getDayType(Day.Monday));
+// console.log(getDayType(Day.Sunday));
 //-----------------------------------------------------------------------------------------
 
 async function squareAsync(n: number): Promise<number> {
@@ -143,5 +143,5 @@ async function squareAsync(n: number): Promise<number> {
     }
   });
 }
-squareAsync(4).then(console.log);
-squareAsync(-3).catch(console.error);
+// squareAsync(4).then(console.log);
+// squareAsync(-3).catch(console.error);
